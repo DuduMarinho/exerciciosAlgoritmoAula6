@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float num, numnovo;
+
+    printf("Escolha uma categoria:\n");
+    printf("1 - Alimentos\n");
+    printf("2 - Eletrônicos\n");
+    printf("3 - Vestuário\n");
+    printf("4 - Outros\n");
+    scanf(" %d", &opcao);
+
+    printf("Digite o valor do produto: ");
+    scanf(" %f", &num);
+
+    switch(opcao) {
+        case 1:
+            numnovo = (num * 0.05) + num;
+            printf("O valor com impostos ao alimento é: %.2f", numnovo);
+            break;
+        case 2:
+            numnovo = (num * 0.10) + num;
+            printf("O valor com impostos do produto eletrônico é: %.2f", numnovo);
+            break;
+        case 3:
+            numnovo = (num * 0.08) + num;
+            printf("O valor com impostos da peça de vestuário é: %.2f", numnovo);
+            break;
+        case 4:
+            numnovo = (num * 0.15) + num;
+            printf("O valor com impostos para o produto é: %.2f", numnovo);
+            break;
+        default:
+            printf("Opção inválida.\n");
+    }
+
+    return 0;
+}
