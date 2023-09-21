@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    
+    
+        float c1, m1, h1, total;
+        
+        
+        printf("Digite sua nota na disciplina de ciências: ");
+        scanf("%f", &c1);
+        
+        printf("Digite sua nota na disciplina de matemática: ");
+        scanf("%f", &m1);
+        
+        printf("Digite sua nota na disciplina de história: ");
+        scanf("%f", &h1);
+        
+        
+        total = (c1 + m1 + h1) / 3;
+        
+        
+        if (total >= 6 && c1 > 4 && m1 > 4 && h1 >4){
+            printf("Você passou por balneário camboriú e nem me levou.");
+            
+        }else if (total >= 6 && c1 < 4 && m1 > 4 && h1 >4){
+            printf("Você passou em matemática e história, mas reprovou em ciências.");
+        }
+        else if (total >= 6 && c1 > 4 && m1 < 4 && h1 >4){
+            printf("Você passou em ciências e história, mas reprovou em matemática.");
+        }
+        else if (total >= 6 && c1 > 4 && m1 > 4 && h1 < 4){
+            printf("Você passou em matemática e ciências, mas reprovou em história.");
+        }
+        else{
+            printf("Você reprovou em tudo kkkkkkkkkkk.");
+        }
+        
+return 0;
+}
