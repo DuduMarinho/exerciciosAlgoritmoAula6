@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double valor, taxa, quant;
+    int n, anos;
+
+    printf("Digite o valor principal: ");
+    scanf("%lf", &valor);
+
+    printf("Digite a taxa de juros anual (em porcentagem): ");
+    scanf("%lf", &taxa);
+
+    printf("Digite o número de vezes que os juros são compostos por ano: ");
+    scanf("%d", &n);
+
+    printf("Digite o número de anos: ");
+    scanf("%d", &anos);
+
+    taxa = taxa / 100;
+    quant = valor * pow((1 + taxa/n), n*anos);
+
+    printf("O montante acumulado após %d anos é: %.2lf\n", anos, quant);
+
+    return 0;
+}
