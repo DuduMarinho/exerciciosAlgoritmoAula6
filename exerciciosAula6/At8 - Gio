@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float medida;
+
+    printf("Escolha uma das seguintes opções:\n");
+    printf("1. Converter de metros para centímetros.\n");
+    printf("2. Converter de centímetros para metros.\n");
+    printf("3. Converter de metros para pés.\n");
+    printf("4. Converter de pés para metros.\n");
+
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
+
+    printf("Digite a medida a ser convertida: ");
+    scanf("%f", &medida);
+
+    switch(opcao) {
+        case 1:
+            printf("%.2f metros é igual a %.2f centímetros.\n", medida, medida * 100);
+            break;
+        case 2:
+            printf("%.2f centímetros é igual a %.2f metros.\n", medida, medida / 100);
+            break;
+        case 3:
+            printf("%.2f metros é igual a %.2f pés.\n", medida, medida * 3.281);
+            break;
+        case 4:
+            printf("%.2f pés é igual a %.2f metros.\n", medida, medida / 3.281);
+            break;
+        default:
+            printf("Opção inválida.\n");
+    }
+
+    return 0;
+}
