@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159
+
+int main() {
+    int opcao;
+    float base, altura, raio;
+
+    printf("Escolha uma das seguintes opções:\n");
+    printf("1. Calcular a área de um retângulo.\n");
+    printf("2. Calcular a área de um triângulo.\n");
+    printf("3. Calcular a área de um círculo.\n");
+
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
+
+    switch(opcao) {
+        case 1:
+            printf("Digite a base do retângulo: ");
+            scanf("%f", &base);
+            printf("Digite a altura do retângulo: ");
+            scanf("%f", &altura);
+            printf("A área do retângulo é: %.2f\n", base * altura);
+            break;
+        case 2:
+            printf("Digite a base do triângulo: ");
+            scanf("%f", &base);
+            printf("Digite a altura do triângulo: ");
+            scanf("%f", &altura);
+            printf("A área do triângulo é: %.2f\n", (base * altura) / 2);
+            break;
+        case 3:
+            printf("Digite o raio do círculo: ");
+            scanf("%f", &raio);
+            printf("A área do círculo é: %.2f\n", PI * pow(raio, 2));
+            break;
+        default:
+            printf("Opção inválida.\n");
+    }
+
+    return 0;
+}
