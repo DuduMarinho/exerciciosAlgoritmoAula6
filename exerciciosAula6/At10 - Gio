@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    float baseMai, baseMen, altura, area;
+
+    printf("Digite o comprimento da base maior do trapézio: ");
+    scanf("%f", &baseMai);
+
+    printf("Digite o comprimento da base menor do trapézio: ");
+    scanf("%f", &baseMen);
+
+    printf("Digite a altura do trapézio: ");
+    scanf("%f", &altura);
+
+    area = (altura / 2) * (baseMai + baseMen);
+    printf("A área do trapézio é: %.2f\n", area);
+
+    return 0;
+}
